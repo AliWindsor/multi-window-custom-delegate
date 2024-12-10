@@ -26,11 +26,11 @@ public class FlutterMultiWindowPlugin: NSObject, FlutterPlugin {
   public typealias OnWindowCreatedCallback = (FlutterViewController, Int64) -> Void
   static var onWindowCreatedCallback: OnWindowCreatedCallback?
 
-  public static func setOnWindowCreatedCallback(_ callback: @escaping OnWindowCreatedCallback) {
+  @objc public static func setOnWindowCreatedCallback(_ callback: @escaping OnWindowCreatedCallback) {
     onWindowCreatedCallback = callback
   }
 
-  public static func setOnWindowClosedCallback(_ callback: @escaping OnWindowClosedCallback) {
+  @objc public static func setOnWindowClosedCallback(_ callback: @escaping OnWindowClosedCallback) {
     onWindowClosedCallback = callback
   }
 
